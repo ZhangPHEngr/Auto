@@ -1,0 +1,23 @@
+<launch>
+
+    <param name="kitti_path" type="string" value="/media/zhangph/Elements/dataset/kitti/raw_data/2011_09_26/2011_09_26_drive_0005_sync"/>
+    <param name="loop_mode" type="bool" value="True" />
+
+    <node pkg="kitti" type="kitti_image.py" name="image_publisher_image_00" output="screen">
+        <param name="cam_id" type="string" value="image_00" />
+        <param name="image_type" type="string" value="gray" />
+    </node>
+    <node pkg="kitti" type="kitti_image.py" name="image_publisher_image_01" output="screen">
+        <param name="cam_id" type="string" value="image_01" />
+        <param name="image_type" type="string" value="gray" />
+    </node>
+    <node pkg="kitti" type="kitti_image.py" name="image_publisher_image_02" output="screen">
+        <param name="cam_id" type="string" value="image_02" />
+        <param name="image_type" type="string" value="rgb" />
+    </node>
+    <node pkg="kitti" type="kitti_image.py" name="image_publisher_image_03" output="screen">
+        <param name="cam_id" type="string" value="image_03" />
+        <param name="image_type" type="string" value="rgb" />
+    </node>
+
+</launch>

@@ -1,0 +1,9 @@
+<launch>
+
+    <param name="kitti_path" type="string" value="/media/zhangph/Elements/dataset/kitti/raw_data/2011_09_26/2011_09_26_drive_0005_sync"/>
+    <param name="loop_mode" type="bool" value="True" />
+
+    <node pkg="kitti" type="kitti_point_cloud.py" name="point_cloud_publisher" output="screen"/>
+    <node pkg="kitti" type="kitti_marker.py" name="marker_publisher" output="screen"/>
+
+</launch>
